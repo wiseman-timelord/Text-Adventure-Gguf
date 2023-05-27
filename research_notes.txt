@@ -1,19 +1,42 @@
 Research Notes:
-1. Text-based RPGs: https://en.wikipedia.org/wiki/Text-based_game
-2. Role-playing: https://studybreaks.com/thoughts/introduction-to-text-based-roleplay/
-3. AI in games: https://en.wikipedia.org/wiki/Artificial_Intelligence_in_video_games
-4. AI in future games: https://www.forbes.com/sites/forbestechcouncil/2022/07/13/how-artificial-intelligence-can-empower-the-future-of-the-gaming-industry/
-5. ChatGPT in games: https://www.polygon.com/ai-artificial-intelligence/23650693/chatgpt-generative-ai-video-game-development
-6. TUI using curses: https://www.devdungeon.com/content/curses-programming-python
-7. Unicurses: https://stackoverflow.com/questions/10506881/python-tui-libs
-8. Py_cui: https://github.com/jwlodek/py_cui
-9. Curses in Python: https://docs.python.org/3/howto/curses.html
-10. Py_cui_ascii: https://pythonawesome.com/a-python-library-for-creating-all-ascii-cui-tui-interfaces-with-widgets/
-11. JSON best practices: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
-12. JSON key-value pairs: https://www.nylas.com/blog/the-complete-guide-to-working-with-json/
-13. JSON error handling: https://stackoverflow.com/questions/12806386/is-there-any-standard-for-json-api-response-format
-14. JSON schema structure: https://json-schema.org/understanding-json-schema/structuring.html
-15. REST API best practices: https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/
-16. Game loop in text RPG: https://stackoverflow.com/questions/74069293/how-can-i-while-loop-my-game-text-based-rpg
-17. Loops in text RPG Python: https://stackoverflow.com/questions/52938687/how-do-you-do-loops-for-a-text-based-rpg-on-python
-18. Room movement in text RPG: https://codereview.stackexchange.com/questions/259245/python-text-based-game-room-to-room-movement
+
+1. Text-based RPGs: Games that use text characters instead of bitmapped or vector graphics. Examples include MUDs (Multi-User Dungeons), where players could read descriptions of rooms, objects, other players, and non-player characters (NPCs) in a virtual world. (https://en.wikipedia.org/wiki/Text-based_game)
+
+2. Role-playing: Text-based roleplay involves creating a character and interacting with other characters in a text-based setting. It can be a great way to improve your writing skills, make new friends, and engage in stories that you create. (https://studybreaks.com/thoughts/introduction-to-text-based-roleplay/)
+
+3. AI in games: AI in video games is a considerable part of game development, contributing to the behaviors and intelligence of characters. AI can be used to generate responsive, adaptive, or intelligent behaviors primarily in non-player characters (NPCs) similar to human-like intelligence. (https://en.wikipedia.org/wiki/Artificial_Intelligence_in_video_games)
+
+4. AI in future games: AI can empower the future of the gaming industry by creating more immersive and realistic experiences. It can also help in personalizing the gaming experience for each player. (https://www.forbes.com/sites/forbestechcouncil/2022/07/13/how-artificial-intelligence-can-empower-the-future-of-the-gaming-industry/)
+
+5. ChatGPT in games: ChatGPT can be used in game development to create dynamic dialogues, making the game more engaging and interactive. (https://www.polygon.com/ai-artificial-intelligence/23650693/chatgpt-generative-ai-video-game-development)
+
+6. TUI using curses: The curses library in Python is used to create text user interfaces. It provides functions to move the cursor, create windows, produce colors, and more. (https://www.devdungeon.com/content/curses-programming-python)
+
+7. Unicurses: A universal wrapper for the curses library, which provides terminal handling capabilities. It allows developers to create text user interfaces. (https://stackoverflow.com/questions/10506881/python-tui-libs)
+
+8. Py_cui: A Python library for creating ASCII user interfaces. It provides a high-level API for creating complex terminal UIs. (https://github.com/jwlodek/py_cui)
+
+9. Curses in Python: The curses module provides an interface to the curses library, the de-facto standard for portable advanced terminal handling. (https://docs.python.org/3/howto/curses.html)
+
+10. Py_cui_ascii: A Python library for creating all ASCII CUI/TUI interfaces with widgets. (https://pythonawesome.com/a-python-library-for-creating-all-ascii-cui-tui-interfaces-with-widgets/)
+
+11. JSON best practices: JSON is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. (https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
+
+12. JSON key-value pairs: JSON objects are surrounded by curly braces {}. JSON objects are written in key/value pairs. Keys must be strings, and values must be a valid JSON data type (string, number, object, array, boolean or null). (https://www.nylas.com/blog/the-complete-guide-to-working-with-json/)
+
+13. JSON error handling: It's important to handle errors in JSON. This can be done by using try/except blocks in Python. (https://stackoverflow.com/questions/12806386/is-there-any-standard-for-json-api-response-format)
+
+14. JSON schema structure: A JSON Schema defines the structure and the legal values of JSON objects.```
+15. REST API best practices: REST is a set of architectural principles that define how web services can be designed and used. Best practices include using HTTP methods explicitly, being stateless, and providing a uniform interface. (https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/)
+
+16. Game loop in text RPG: A game loop is a loop within a video game where the game's events are processed. It's important to have a game loop in a text RPG to handle user input and game events. (https://stackoverflow.com/questions/74069293/how-can-i-while-loop-my-game-text-based-rpg)
+
+17. Loops in text RPG Python: Loops are used in text RPGs in Python to repeat certain actions or events. For example, a loop can be used to repeat the game's main event until the player decides to quit. (https://stackoverflow.com/questions/52938687/how-do-you-do-loops-for-a-text-based-rpg-on-python)
+
+18. Room movement in text RPG: Room movement in a text RPG involves the player moving from one room to another. This can be implemented using a dictionary to represent the rooms and their connections. (https://codereview.stackexchange.com/questions/259245/python-text-based-game-room-to-room-movement)
+
+19. StableLM: StableLM is a language model developed by OpenAI. It's a powerful tool that can generate human-like text based on the input it's given. It can be used to create dynamic dialogues in a text RPG. (https://stablelm.readthedocs.io/en/latest/)
+
+20. Python: Python is a high-level, interpreted programming language. It's known for its clear syntax and readability. Python is widely used in scientific and numeric computing, web development, and as a scripting language for software packages. (https://www.python.org/)
+
+21. Notepad++: Notepad++ is a free source code editor and Notepad replacement that supports several languages. It's running in the MS Windows environment and its use is governed by GPL License. (https://notepad-plus-plus.org/)
