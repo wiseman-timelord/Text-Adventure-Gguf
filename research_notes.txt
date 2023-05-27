@@ -1,0 +1,19 @@
+Research Notes:
+1. Text-based RPGs: https://en.wikipedia.org/wiki/Text-based_game
+2. Role-playing: https://studybreaks.com/thoughts/introduction-to-text-based-roleplay/
+3. AI in games: https://en.wikipedia.org/wiki/Artificial_Intelligence_in_video_games
+4. AI in future games: https://www.forbes.com/sites/forbestechcouncil/2022/07/13/how-artificial-intelligence-can-empower-the-future-of-the-gaming-industry/
+5. ChatGPT in games: https://www.polygon.com/ai-artificial-intelligence/23650693/chatgpt-generative-ai-video-game-development
+6. TUI using curses: https://www.devdungeon.com/content/curses-programming-python
+7. Unicurses: https://stackoverflow.com/questions/10506881/python-tui-libs
+8. Py_cui: https://github.com/jwlodek/py_cui
+9. Curses in Python: https://docs.python.org/3/howto/curses.html
+10. Py_cui_ascii: https://pythonawesome.com/a-python-library-for-creating-all-ascii-cui-tui-interfaces-with-widgets/
+11. JSON best practices: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+12. JSON key-value pairs: https://www.nylas.com/blog/the-complete-guide-to-working-with-json/
+13. JSON error handling: https://stackoverflow.com/questions/12806386/is-there-any-standard-for-json-api-response-format
+14. JSON schema structure: https://json-schema.org/understanding-json-schema/structuring.html
+15. REST API best practices: https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/
+16. Game loop in text RPG: https://stackoverflow.com/questions/74069293/how-can-i-while-loop-my-game-text-based-rpg
+17. Loops in text RPG Python: https://stackoverflow.com/questions/52938687/how-do-you-do-loops-for-a-text-based-rpg-on-python
+18. Room movement in text RPG: https://codereview.stackexchange.com/questions/259245/python-text-based-game-room-to-room-movement
