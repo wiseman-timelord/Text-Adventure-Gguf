@@ -17,7 +17,7 @@
 <br>-Integrate interface, it will be curses to start with then more graphical later for Stable Diffusion Integration from local models.
 <br>-Improve memory functions, fur StableLM there will be 4096 context length, this would be good for a 1-2k token memory of events.
 <br>-Integrade Sable Diffusion 1.5 output to generate representation of, user and AI, actions.
-<br>-Integrate more compitent Multi-Character scenes by stitching generated characters onto generated scene.
+<br>-Integrate more compitent Multi-Character scenes by using scripts to stitch generated characters onto generated scenes.
 <br>
 <br>
 <br>Models Information:
