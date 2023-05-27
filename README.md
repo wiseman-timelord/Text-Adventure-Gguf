@@ -5,10 +5,10 @@
 <br>The game:
 <br>The user will choose from set locations: house, street, park, woods, pub, lake, car, van.
 <br>In each location, there will be a random set of AI roleplayers present from these choices: gang, police, friends, strangers.
-<br>The user will be able to interact with the, environment or AI roleplayers, the AI must then print a response in relevance to the users, actions and speech, with its own actions and speech.
-<br>After each response from the AI, the AI must then summarize the, user and AI, actions and speech, this will result in a loop of, 1 user input, then 1 AI response, then 1 AI summary.
+<br>The user produces, actions and speech, in relevance to the, environment or AI roleplayers, the AI must respond in, actions and speech.
+<br>After response from AI, the AI summarize, user and AI, actions and speech, result in a loop of, user input, AI response, AI summary.
 <br>The game will end, when the user decides to, end the game and exit, otherwise the roleplay could go on forever.
-<br>the locations should be able to be chosen by the user, the user should be able to travel at any point, resulting in a, shuffle of the roleplayers and change of prompts.
+<br>the locations chosen by the user, the user are able to travel, resulting in, shuffle of roleplayers and change of prompts.
 <br>
 <br>
 <br>The plan:
