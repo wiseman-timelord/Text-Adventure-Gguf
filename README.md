@@ -12,9 +12,9 @@
 
 <br>The plan:
 <br>-Create fleshed out scripts from framework.
-<br>-Try to get it to work on StableLM.
-<br>-Upgrade interface.
-<br>-Improve memory functions.
+<br>-Try to get it to work on StableLM, just because this would be both the word Stable in the name, maybe train a new one if I have to..
+<br>-Integrate interface, it will be curses to start with then more graphical later for Stable Diffusion Integration.
+<br>-Improve memory functions, fur StableLM there will be 4096 context length, this would be good for a 1-2k token memory of events.
 <br>-Integrade Sable Diffusion 1.5 output at end of each round to generate representation of, user and AI, actions as multiple characters in a scene.
 <br>
 <br>
