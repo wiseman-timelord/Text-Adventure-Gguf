@@ -18,10 +18,15 @@
 <br>-Improve memory functions, fur StableLM there will be 4096 context length, this would be good for a 1-2k token memory of events.
 <br>-Integrade Sable Diffusion 1.5 output to generate representation of, user and AI, actions.
 <br>-Integrate more compitent Multi-Character scenes through scripts to stitch generated characters onto generated scenes.
+<br>-Scene animation option through 
 <br>
 <br>
 <br>Models Information:
 <br>-StableLM for text generation Model Card = "https://huggingface.co/OpenAssistant/stablelm-7b-sft-v7-epoch-3". 
 <br>-Stable Diffusion for text generation Model Card = "https://huggingface.co/runwayml/stable-diffusion-v1-5". 
+<br>
+<br>
+<br>Entertainment:
+<br>Information on stitching generated images to generated scene - "https://www.youtube.com/watch?v=uR89wZMXiJ8"
 <br>
 <br>
