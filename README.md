@@ -11,7 +11,7 @@
 <br>the locations should be able to be chosen by the user, the user should be able to travel at any point, resulting in a, shuffle of the roleplayers and change of prompts.
 
 <br>The plan:
-<br>-Create fleshed out scripts from framework.
+<br>-Create fleshed out scripts from framework already created by GPT4 + VoxScript Plugin, using upto date information from internet.
 <br>-Try to get it to work on StableLM, just because this would be both the word Stable in the name, maybe train a new one if I have to..
 <br>-Integrate interface, it will be curses to start with then more graphical later for Stable Diffusion Integration.
 <br>-Improve memory functions, fur StableLM there will be 4096 context length, this would be good for a 1-2k token memory of events.
