@@ -1,5 +1,5 @@
 <br># Stable-RPG
-<br>AI powered role-playing game
+<br>AI powered role-playing game version 000
 <br>
 <br>
 <br>The game:
