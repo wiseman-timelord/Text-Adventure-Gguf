@@ -3,7 +3,7 @@
 <br>
 <br>
 <br>The game:
-<br>The user will choose from set locations: house, street, park, woods, pub, lake, car, van, realistic locations for every day.
+<br>The user will choose from set locations: house, street, park, woods, pub, lake, car, van, realistic and logical, locations.
 <br>In each location, there will be a random set of AI roleplayers present from these choices: gang, police, friends, strangers.
 <br>The user produces, actions and speech, in relevance to the, environment or AI roleplayers, the AI must respond in, actions and speech.
 <br>After response from AI, the AI summarize, user and AI, actions and speech, result in a loop of, user input, AI response, AI summary.
