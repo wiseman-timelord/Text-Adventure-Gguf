@@ -8,15 +8,16 @@
 <br>The user produces, actions and speech, in relevance to the, environment or AI roleplayers, the AI must respond in, actions and speech.
 <br>After response from AI, the AI summarize, user and AI, actions and speech, result in a loop of, user input, AI response, AI summary.
 <br>The game will end, when the user decides to, end the game and exit, otherwise the roleplay could go on forever.
-<br>the locations chosen by the user, the user are able to travel, resulting in, shuffle of roleplayers and change of prompts.
+<br>The locations chosen by the user, the user are able to travel, resulting in, shuffle of roleplayers and change of prompts.
 <br>
 <br>
 <br>The plan:
 <br>-Create fleshed out scripts from framework already created by GPT4 + VoxScript Plugin, using upto date information from internet.
-<br>-Try to get it to work on StableLM, just because this would be both the word Stable in the name, maybe train a new one if I have to..
+<br>-Try to get it to work on StableLM, this would be both, the word Stable and 4096 context length, maybe train a new one if I have to.
 <br>-Integrate interface, it will be curses to start with then more graphical later for Stable Diffusion Integration from local models.
 <br>-Improve memory functions, fur StableLM there will be 4096 context length, this would be good for a 1-2k token memory of events.
-<br>-Integrade Sable Diffusion 1.5 output to generate representation of, user and AI, actions as multiple characters in a scene.
+<br>-Integrade Sable Diffusion 1.5 output to generate representation of, user and AI, actions.
+<br>-Integrate more compitent Multi-Character scenes by stitching generated characters onto generated scene.
 <br>
 <br>
 <br>Models Information:
