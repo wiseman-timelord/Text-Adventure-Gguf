@@ -15,6 +15,6 @@
 <br>-Try to get it to work on StableLM.
 <br>-Upgrade interface.
 <br>-Improve memory functions.
-<br>-Integrade Sable Diffusion 1.5 output at end of each round to summarize, user and AI, actions.
+<br>-Integrade Sable Diffusion 1.5 output at end of each round to generate representation of, user and AI, actions as multiple characters in a scene.
 <br>
 <br>
