@@ -22,7 +22,7 @@
 <br>6. Improve multi-character scenes through scripts to stitch generated characters onto generated scenes.
 <br>7. Add an option for scene animation.
 <br>
-<br>## Models Information
+<br>## Target Models
 <br>- StableLM for text generation Model Card: "https://huggingface.co/OpenAssistant/stablelm-7b-sft-v7-epoch-3".
 <br>- Stable Diffusion for scene generation Model Card: "https://huggingface.co/runwayml/stable-diffusion-v1-5". 
 <br>
