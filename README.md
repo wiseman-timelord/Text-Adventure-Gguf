@@ -1,5 +1,5 @@
 <br># Stable-RPG
-<br>Version: 001
+<br>Version: 000-Alpha
 <br>
 <br>## Overview
 <br>Stable-RPG is an AI-powered text-based role-playing game that provides an immersive and interactive gaming experience. The game leverages advanced AI models to create dynamic dialogues and scenarios, offering a unique role-playing experience every time. The user can choose from a variety of realistic locations and interact with a diverse set of AI roleplayers. The game continues indefinitely until the user decides to exit, providing an endless role-playing experience.
