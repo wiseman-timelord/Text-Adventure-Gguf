@@ -1,4 +1,4 @@
-transformers==4.11.3
-torch==1.10.0
-curses==2.2
-jsonschema==4.2.1
+transformers
+torch
+windows-curses
+jsonschema

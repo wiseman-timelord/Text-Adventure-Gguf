@@ -23,3 +23,10 @@ class GameParameters:
 
     def get_parameters(self):
         return self.parameters
+
+    def save_parameters(self, filename):
+        with open(filename, 'w') as f:
+            json.dump(self.parameters, f)
+
+    def load_parameters(self, filename):
+        with open(filename

@@ -1,13 +1,15 @@
 import json
 from user_interaction import handle_user_input, generate_ai_response, generate_ai_summary
+from game_mechanics import GameMechanics
 
 def game_loop(game_parameters):
-    while True:
+    game_mechanics = GameMechanics()
+    while not game_mechanics.is_game_over():
         # Prompt the user for input
         user_input = input('> ')
 
         # Handle the user's input
-        handle_user_input(user_input, game_parameters)
+        handle_user_input(user_input, game_parameters, game_mechanics)
 
         # Generate the AI's response
         ai_response = generate_ai_response(game_parameters)
@@ -20,12 +22,3 @@ def game_loop(game_parameters):
 
         # Print the AI's summary
         print(ai_summary)
-
-        # Check if the game has ended
-        if game_parameters['game_end']:
-            break
-
-def game_end(game_parameters):
-    # Determine if the game has ended
-    # This is a placeholder and should be replaced with actual code
-    return False

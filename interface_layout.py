@@ -22,3 +22,8 @@ class InterfaceLayout:
     def display_timer(self, time_left):
         self.screen.addstr(2, 0, f"Time left: {time_left}", curses.color_pair(3))
         self.screen.refresh()
+
+    def display_game_state(self, game_state):
+        game_state_str = json.dumps(game_state, indent=4)
+        self.screen.addstr(3, 0, game_state_str, curses.color_pair(1))
+        self.screen.refresh()
