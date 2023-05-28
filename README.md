@@ -12,7 +12,7 @@
 <br>
 <br>## The Plan
 <br>### Done
-<br>1. Created fleshed out scripts from the framework already created by GPT4 + VoxScript Plugin, using up-to-date information from the internet.
+<br>1. Created fleshed out scripts from the framework already created by GPT4 +, VoxScript & Wolfram & LinkReader, Plugins.
 <br>2. Adapted the game to work on StableLM, leveraging its 4096 context length for improved memory functions.
 <br>3. Integrated a text user interface using curses.
 <br>
