@@ -1,4 +1,7 @@
 transformers
 torch
 windows-curses
+json
 jsonschema
+curses
+nltk

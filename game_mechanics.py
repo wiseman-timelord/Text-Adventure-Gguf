@@ -1,3 +1,6 @@
+# Filename: game_mechanics.py
+import nltk
+
 class GameMechanics:
     def __init__(self):
         self.user_actions = []
@@ -19,6 +22,20 @@ class GameMechanics:
         }
 
     def parse_user_input(self, user_input):
-        # This is a placeholder and should be replaced with actual code
-        # Parse the user's input and return the corresponding action
+        # Tokenize the user input
+        tokens = nltk.word_tokenize(user_input)
+        # Tag the tokens with part of speech tags
+        tagged = nltk.pos_tag(tokens)
+        # Extract the verbs and nouns
+        verbs = [word for word, pos in tagged if pos in ['VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ']]
+        nouns = [word for word, pos in tagged if pos in ['NN', 'NNS', 'NNP', 'NNPS']]
+        # Return the verbs and nouns as the action and object
+        return verbs, nouns
+
+    def check_game_over(self):
+        # Add logic to check if the game is over
+        pass
+
+    def calculate_score(self):
+        # Add logic to calculate the score based on the game state
         pass

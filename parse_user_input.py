@@ -1,10 +1,9 @@
-import re
+# Filename: parse_user_input.py
 
 def parse_user_input():
     while True:
         user_input = input('> ')
         user_input = user_input.strip()
-        user_input = re.split(r'\s+', user_input)
         if validate_user_input(user_input):
             return user_input
         else:
@@ -12,4 +11,8 @@ def parse_user_input():
 
 def validate_user_input(user_input):
     # Add validation logic here
-    pass
+    # For example, check if the user input is not empty
+    if user_input:
+        return True
+    else:
+        return False
