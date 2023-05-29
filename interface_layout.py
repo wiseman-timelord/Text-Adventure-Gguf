@@ -16,15 +16,16 @@ class InterfaceLayout:
         self.screen.bkgd(curses.color_pair(4))
         self.screen.box()
         self.screen.refresh()
+        self.max_y, self.max_x = self.screen.getmaxyx()  # Get the size of the window
 
     def display_user_input(self, user_input):
         self.screen.erase()
-        self.screen.addstr(0, 0, user_input, curses.color_pair(1))
+        self.screen.addstr(0, 0, user_input[:self.max_x], curses.color_pair(1))  # Limit the length of the string to the width of the screen
         self.screen.refresh()
 
     def display_conversation(self, conversation):
         self.screen.erase()
-        self.screen.addstr(1, 0, conversation, curses.color_pair(2))
+        self.screen.addstr(1, 0, conversation[:self.max_x], curses.color_pair(2))  # Limit the length of the string to the width of the screen
         self.screen.refresh()
 
     def display_timer(self, time_left):

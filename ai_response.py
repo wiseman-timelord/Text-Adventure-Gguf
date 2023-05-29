@@ -9,11 +9,18 @@ class AIResponse:
         self.pipeline = pipeline('text-generation', model=self.model, tokenizer=self.tokenizer)
 
     def generate_response(self, prompt):
-        inputs = self.tokenizer.encode(prompt, return_tensors='pt', truncation=True, max_length=384)
-        outputs = self.model.generate(inputs, max_length=384)
+        # Ensure the prompt is within the character limit
+        if len(prompt) > 2867:
+            prompt = prompt[:2867]
+        inputs = self.tokenizer.encode(prompt, return_tensors='pt', truncation=True, max_length=2867)
+        # Set the max_length to 256 for the model's output
+        outputs = self.model.generate(inputs, max_length=256)
         response = self.tokenizer.decode(outputs[0])
         return response
 
     def generate_response_with_pipeline(self, prompt):
-        response = self.pipeline(prompt, max_length=384, do_sample=True, temperature=0.7)
+        # Ensure the prompt is within the character limit
+        if len(prompt) > 2867:
+            prompt = prompt[:2867]
+        response = self.pipeline(prompt, max_length=256, do_sample=True, temperature=0.7)
         return response[0]['generated_text']

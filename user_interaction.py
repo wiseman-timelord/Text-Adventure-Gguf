@@ -1,7 +1,8 @@
 # Filename: user_interaction.py
 
-from transformers import AutoTokenizer, AutoModelWithLMHead
+from transformers import AutoTokenizer, AutoModelForCausalLM
 from game_mechanics import GameMechanics
+from locations_roleplayers import locations
 
 class Action:
     def __init__(self, action_name, action_method):
@@ -26,7 +27,7 @@ def handle_user_input(user_input, game_mechanics):
 def generate_ai_response(game_mechanics):
     # Generate the AI's response using the StableLM model
     tokenizer = AutoTokenizer.from_pretrained("./stablelm-7b-sft-v7-epoch-3")
-    model = AutoModelWithLMHead.from_pretrained("./stablelm-7b-sft-v7-epoch-3")
+    model = AutoModelForCausalLM.from_pretrained("./stablelm-7b-sft-v7-epoch-3")
     inputs = tokenizer.encode(game_mechanics.user_actions[-1], return_tensors='pt')
     outputs = model.generate(inputs, max_length=384)
     response = tokenizer.decode(outputs[0])

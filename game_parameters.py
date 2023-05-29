@@ -11,7 +11,9 @@ class GameParameters:
             "location": "",
             "ai_roleplayers": [],
             "game_state": "",
-            "score": 0
+            "score": 0,
+            "inventory": [],  # Added inventory parameter
+            "health": 100  # Added health parameter
         }
 
     def update_user_input(self, user_input):
@@ -31,6 +33,12 @@ class GameParameters:
 
     def update_score(self, score):
         self.parameters["score"] = score
+
+    def update_inventory(self, inventory):  # Added update_inventory method
+        self.parameters["inventory"] = inventory
+
+    def update_health(self, health):  # Added update_health method
+        self.parameters["health"] = health
 
     def get_parameters(self):
         return self.parameters
