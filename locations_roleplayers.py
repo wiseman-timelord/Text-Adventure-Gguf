@@ -7,6 +7,18 @@ class Location:
         self.items = items
         self.roleplayers = roleplayers
 
+    def get_name(self):
+        return self.name
+
+    def get_description(self):
+        return self.description
+
+    def get_items(self):
+        return self.items
+
+    def get_roleplayers(self):
+        return self.roleplayers
+
 locations = {
     'house': Location('House', 'A cozy little house.', ['book', 'lamp'], ['gang', 'friends', 'strangers']),
     'street': Location('Street', 'A busy city street.', ['coin', 'newspaper'], ['police', 'gang', 'strangers']),

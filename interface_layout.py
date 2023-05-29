@@ -1,6 +1,6 @@
 # Filename: interface_layout.py
 
-import windows_curses as curses
+import curses
 
 class InterfaceLayout:
     def __init__(self):
@@ -30,6 +30,11 @@ class InterfaceLayout:
     def display_timer(self, time_left):
         self.screen.erase()
         self.screen.addstr(2, 0, f"Time left: {time_left}", curses.color_pair(3))
+        self.screen.refresh()
+
+    def display_game_state(self, game_state):
+        self.screen.erase()
+        self.screen.addstr(3, 0, f"Game state: {game_state}", curses.color_pair(4))
         self.screen.refresh()
 
     def __del__(self):

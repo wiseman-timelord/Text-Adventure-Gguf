@@ -5,3 +5,5 @@ json
 jsonschema
 curses
 nltk
+pickle
+re

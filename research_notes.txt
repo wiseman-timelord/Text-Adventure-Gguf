@@ -1,63 +1,45 @@
-1.  Text-based RPGs: Games that use text characters instead of bitmapped or vector graphics. Examples include MUDs (Multi-User Dungeons). (en.wikipedia.org/wiki/Text-based\_game)
-2.  Role-playing: Text-based roleplay involves creating a character and interacting with other characters in a text-based setting. (studybreaks.com/thoughts/introduction-to-text-based-roleplay/)
-3.  AI in games: AI in video games contributes to the behaviors and intelligence of characters. (en.wikipedia.org/wiki/Artificial\_Intelligence\_in\_video\_games)
-4.  AI in future games: AI can empower the future of the gaming industry by creating more immersive and realistic experiences. (forbes.com/sites/forbestechcouncil/2022/07/13/how-artificial-intelligence-can-empower-the-future-of-the-gaming-industry/)
-5.  ChatGPT in games: ChatGPT can be used in game development to create dynamic dialogues. (polygon.com/ai-artificial-intelligence/23650693/chatgpt-generative-ai-video-game-development)
-6.  TUI using curses: The curses library in Python is used to create text user interfaces. (devdungeon.com/content/curses-programming-python)
-7.  Unicurses: A universal wrapper for the curses library, which provides terminal handling capabilities. (stackoverflow.com/questions/10506881/python-tui-libs)
-8.  Py\_cui: A Python library for creating ASCII user interfaces. (github.com/jwlodek/py\_cui)
-9.  Curses in Python: The curses module provides an interface to the curses library. (docs.python.org/3/howto/curses.html)
-10.  Py\_cui\_ascii: A Python library for creating all ASCII CUI/TUI interfaces with widgets. (pythonawesome.com/a-python-library-for-creating-all-ascii-cui-tui-interfaces-with-widgets/)
-11.  JSON best practices: JSON is a lightweight data-interchange format. (developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
-12.  JSON key-value pairs: JSON objects are written in key/value pairs. (nylas.com/blog/the-complete-guide-to-working-with-json/)
-13.  JSON error handling: It's important to handle errors in JSON. (stackoverflow.com/questions/12806386/is-there-any-standard-for-json-api-response-format)
-14.  JSON schema structure: A JSON Schema defines the structure and the legal values of JSON objects.
-15.  REST API best practices: REST is a set of architectural principles that define how web services can be designed and used. (stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/)
-16.  Game loop in text RPG: A game loop is a loop within a video game where the game's events are processed. (stackoverflow.com/questions/74069293/how-can-i-while-loop-my-game-text-based-rpg)
-17.  Loops in text RPG Python: Loops are used in text RPGs in Python to repeat certain actions or events. (stackoverflow.com/questions/52938687/how-do-you-do-loops-for-a-text-based-rpg-on-python)
-18.  Room movement in text RPG: Room movement in a text RPG involves the player moving from one room to another. (codereview.stackexchange.com/questions/259245/python-text-based-game-room-to-room-movement)
-19.  StableLM: StableLM is a language model developed by OpenAI. (stablelm.readthedocs.io/en/latest/)
-20.  Python import statements: Import statements in Python are used to gain access to the code in another module. (stackoverflow.com/questions/9916878/importing-modules-in-python-best-practice)
-21.  Absolute vs Relative Imports in Python: A relative import specifies the resource to be imported relative to the current location. (realpython.com/absolute-vs-relative-python-imports/)
-22.  The Definitive Guide to Python import Statements: Python's documentation for sys.path describes it as a list of strings that specifies the search path for modules. (chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html)
-23.  Notepad++: Notepad++ is a free source code editor and Notepad replacement that supports several languages. (notepad-plus-plus.org/)
-24.  Python virtual environments: Virtual environments allow you to create isolated Python environments where you can install packages without interfering with the global Python installation. (python.org/dev/peps/pep-0405/)
-25.  Pip: Pip is a package installer for Python. It is used to install, upgrade, and manage Python packages. (pypi.org/project/pip/)
-26.  PyPI: PyPI (Python Package Index) is the official third-party software repository for Python. It hosts thousands of Python packages that can be installed using pip. (pypi.org/)
-27.  Virtualenv: Virtualenv is a tool used to create isolated Python environments. It allows you to manage different sets of dependencies for different projects. (virtualenv.pypa.io/en/latest/)
-28.  Flask: Flask is a micro web framework written in Python. It is used for developing web applications and APIs. (palletsprojects.com/p/flask/)
-29.  Django: Django is a high-level web framework written in Python. It provides a set of tools and functionalities for building web applications. (djangoproject.com/)
-30.  SQLAlchemy: SQLAlchemy is an open-source SQL toolkit and Object-Relational Mapping (ORM) library for Python. (sqlalchemy.org/)
-31.  Pygame: Pygame is a cross-platform set of Python modules designed for creating video games. (pygame.org/)
-32.  Matplotlib: Matplotlib is a plotting library for Python. It provides an object-oriented API for embedding plots into applications or creating standalone visualizations. (matplotlib.org/)
-33.  NumPy: NumPy is a library for the Python programming language, adding support for large, multi-dimensional arrays and matrices. (numpy.org/)
-34.  Pandas: Pandas is a fast, powerful, and flexible open-source data analysis and manipulation library for Python. (pandas.pydata.org/)
-35.  Scikit-learn: Scikit-learn is a machine learning library for Python. It provides a range of supervised and unsupervised learning algorithms and tools for model selection and evaluation. (scikit-learn.org/)
-36.  TensorFlow: TensorFlow is an open-source machine learning framework developed by Google. (tensorflow.org/)
-37.  Keras: Keras is a high-level neural networks API written in Python. It provides an intuitive and user-friendly interface for building deep learning models. (keras.io/)
-38.  OpenCV: OpenCV is an open-source computer vision and machine learning software library. (opencv.org/)
-39.  Natural Language Processing (NLP): NLP is a subfield of artificial intelligence that focuses on the interaction between computers and human language. (en.wikipedia.org/wiki/Natural\_language\_processing)
-40.  Reinforcement Learning: Reinforcement learning is a branch of machine learning that focuses on decision-making and control through trial and error. (en.wikipedia.org/wiki/Reinforcement\_learning)
-41.  Deep Learning: Deep learning is a subset of machine learning that focuses on artificial neural networks with multiple layers. (en.wikipedia.org/wiki/Deep\_learning)
-42.  Convolutional Neural Networks (CNNs): CNNs are a type of neural network architecture designed for processing structured grid-like data. (en.wikipedia.org/wiki/Convolutional\_neural\_network)
-43.  Recurrent Neural Networks (RNNs): RNNs are a type of neural network architecture designed for processing sequential data. (en.wikipedia.org/wiki/Recurrent\_neural\_network)
-44.  Generative Adversarial Networks (GANs): GANs are a type of generative model that consists of a generator network and a discriminator network. (en.wikipedia.org/wiki/Generative\_adversarial\_network)
-45.  Transfer Learning: Transfer learning is a technique in machine learning where a model trained on one task is reused or fine-tuned on a different but related task. (en.wikipedia.org/wiki/Transfer\_learning)
-46.  Model Evaluation Metrics: Model evaluation metrics are used to assess the performance of machine learning models. (en.wikipedia.org/wiki/Evaluation\_metrics\_(machine\_learning))
-47.  Cross-Validation: Cross-validation is a technique used to assess the performance of machine learning models by splitting the data into multiple subsets. (en.wikipedia.org/wiki/Cross-validation\_(statistics))
-48.  Overfitting and Underfitting: Overfitting occurs when a model performs well on the training data but poorly on unseen data. (en.wikipedia.org/wiki/Overfitting)
-49.  Hyperparameter Tuning: Hyperparameter tuning is the process of selecting the optimal values for the hyperparameters of a machine learning model. (en.wikipedia.org/wiki/Hyperparameter\_optimization)
-50.  Ensemble Learning: Ensemble learning is a technique where multiple models, called base learners, are combined to make predictions. (en.wikipedia.org/wiki/Ensemble\_learning)
-51.  Bias-Variance Tradeoff: The bias-variance tradeoff is a fundamental concept in machine learning. (en.wikipedia.org/wiki/Bias–variance\_tradeoff)
-52.  Dimensionality Reduction: Dimensionality reduction is the process of reducing the number of input features or variables while preserving the important information in the data. (en.wikipedia.org/wiki/Dimensionality\_reduction)
-53.  Clustering: Clustering is a technique used to group similar data points together based on their characteristics or patterns. (en.wikipedia.org/wiki/Cluster\_analysis)
-54.  Anomaly Detection: Anomaly detection is the task of identifying rare or unusual events or patterns in data. (en.wikipedia.org/wiki/Anomaly\_detection)
-55.  Recommendation Systems: Recommendation systems are used to provide personalized recommendations to users based on their preferences or past behavior. (en.wikipedia.org/wiki/Recommender\_system)
-56.  Time Series Analysis: Time series analysis involves analyzing and forecasting data that is indexed by time. (en.wikipedia.org/wiki/Time\_series)
-57.  Neural Architecture Search (NAS): NAS is a technique in deep learning where neural network architectures are automatically searched and optimized for a given task. (en.wikipedia.org/wiki/Neural\_architecture\_search)
-58.  Data Augmentation: Data augmentation is a technique used to artificially increase the size of the training dataset by applying transformations or perturbations to the existing data. (en.wikipedia.org/wiki/Data\_augmentation)
-59.  AutoML (Automated Machine Learning): AutoML refers to the automation of the machine learning pipeline. (en.wikipedia.org/wiki/Automated\_machine\_learning)
-60.  Explainable AI: Explainable AI (XAI) refers to the development of machine learning models and algorithms that can provide transparent and interpretable explanations for their predictions or decisions. (en.wikipedia.org/wiki/Explainable\_AI)
-61.  Federated Learning: Federated learning is a distributed machine learning approach where training data remains on local devices or edge servers, and only model updates are shared with a central server. (en.wikipedia.org/wiki/Federated\_learning)
-62.  Quantum Machine Learning: Quantum machine learning is the intersection of quantum computing and machine learning. It explores the use of quantum algorithms and hardware to enhance machine learning tasks. (en.wikipedia.org/wiki/Quantum\_machine\_learning)
-63.  GPT-3: GPT-3 (Generative Pre-trained Transformer 3) is a language model developed by OpenAI. It is one of the largest language models to date, capable of generating human-like text and performing various natural language processing tasks. (openai.com/blog/gpt-3-applications/)
+1. Text-based RPGs: Games using text characters instead of graphics. Examples include MUDs (Multi-User Dungeons).
+2. Role-playing: Text-based roleplay involves creating a character and interacting with other characters in a text-based setting.
+3. AI in games: AI contributes to the behaviors and intelligence of characters in video games.
+4. ChatGPT in games: ChatGPT can be used in game development to create dynamic dialogues.
+5. TUI using curses: The curses library in Python is used to create text user interfaces.
+6. JSON best practices: JSON is a lightweight data-interchange format.
+7. Game loop in text RPG: A game loop is a loop within a video game where the game's events are processed.
+8. StableLM: StableLM is a language model developed by OpenAI.
+9. Python import statements: Import statements in Python are used to gain access to the code in another module.
+10. Python virtual environments: Virtual environments allow you to create isolated Python environments where you can install packages without interfering with the global Python installation.
+11. PyPI: PyPI (Python Package Index) is the official third-party software repository for Python.
+12. Flask: Flask is a micro web framework written in Python. It is used for developing web applications and APIs.
+13. Django: Django is a high-level web framework written in Python.
+14. SQLAlchemy: SQLAlchemy is an open-source SQL toolkit and Object-Relational Mapping (ORM) library for Python.
+15. Pygame: Pygame is a cross-platform set of Python modules designed for creating video games.
+16. Matplotlib: Matplotlib is a plotting library for Python.
+17. NumPy: NumPy is a library for the Python programming language, adding support for large, multi-dimensional arrays and matrices.
+18. Pandas: Pandas is a fast, powerful, and flexible open-source data analysis and manipulation library for Python.
+19. Scikit-learn: Scikit-learn is a machine learning library for Python.
+20. TensorFlow: TensorFlow is an open-source machine learning framework developed by Google.
+21. Keras: Keras is a high-level neural networks API written in Python.
+22. OpenCV: OpenCV is an open-source computer vision and machine learning software library.
+23. Natural Language Processing (NLP): NLP is a subfield of artificial intelligence that focuses on the interaction between computers and human language.
+24. Deep Learning: Deep learning is a subset of machine learning that focuses on artificial neural networks with multiple layers.
+25. Convolutional Neural Networks (CNNs): CNNs are a type of neural network architecture designed for processing structured grid-like data.
+26. Recurrent Neural Networks (RNNs): RNNs are a type of neural network architecture designed for processing sequential data.
+27. Generative Adversarial Networks (GANs): GANs are a type of generative model that consists of a generator network and a discriminator network.
+28. Transfer Learning: Transfer learning is a technique in machine learning where a model trained on one task is reused or fine-tuned on a different but related task.
+29. Model Evaluation Metrics: Model evaluation metrics are used to assess the performance of machine learning models.
+30. Overfitting and Underfitting: Overfitting occurs when a model performs well on the training data but poorly on unseen data.
+31. Hyperparameter Tuning: Hyperparameter tuning is the process of selecting the optimal values for the hyperparameters of a machine learning model.
+32. Ensemble Learning: Ensemble learning is a technique where multiple models, called base learners, are combined to makepredictions.
+33. Bias-Variance Tradeoff: The bias-variance tradeoff is a fundamental concept in machine learning.
+34. Dimensionality Reduction: Dimensionality reduction is the process of reducing the number of input features or variables while preserving the important information in the data.
+35. Clustering: Clustering is a technique used to group similar data points together based on their characteristics or patterns.
+36. Anomaly Detection: Anomaly detection is the task of identifying rare or unusual events or patterns in data.
+37. Recommendation Systems: Recommendation systems are used to provide personalized recommendations to users based on their preferences or past behavior.
+38. Time Series Analysis: Time series analysis involves analyzing and forecasting data that is indexed by time.
+39. Neural Architecture Search (NAS): NAS is a technique in deep learning where neural network architectures are automatically searched and optimized for a given task.
+40. Data Augmentation: Data augmentation is a technique used to artificially increase the size of the training dataset by applying transformations or perturbations to the existing data.
+41. AutoML (Automated Machine Learning): AutoML refers to the automation of the machine learning pipeline.
+42. Explainable AI: Explainable AI (XAI) refers to the development of machine learning models and algorithms that can provide transparent and interpretable explanations for their predictions or decisions.
+43. Federated Learning: Federated learning is a distributed machine learning approach where training data remains on local devices or edge servers, and only model updates are shared with a central server.
+44. Quantum Machine Learning: Quantum machine learning is the intersection of quantum computing and machine learning. It explores the use of quantum algorithms and hardware to enhance machine learning tasks.
+45. GPT-3: GPT-3 (Generative Pre-trained Transformer 3) is a language model developed by OpenAI. It is one of the largest language models to date, capable of generating human-like text and performing various natural language processing tasks.

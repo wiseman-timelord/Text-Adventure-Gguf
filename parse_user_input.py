@@ -1,4 +1,5 @@
 # Filename: parse_user_input.py
+import re
 
 def parse_user_input():
     while True:
@@ -10,9 +11,8 @@ def parse_user_input():
             print("Invalid input. Please try again.")
 
 def validate_user_input(user_input):
-    # Add validation logic here
-    # For example, check if the user input is not empty
-    if user_input:
+    # Check if the user input is not empty and contains only alphanumeric characters and spaces
+    if user_input and re.match('^[a-zA-Z0-9 ]*$', user_input):
         return True
     else:
         return False

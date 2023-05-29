@@ -9,7 +9,9 @@ class GameParameters:
             "user_input": "",
             "previous_summary": "",
             "location": "",
-            "ai_roleplayers": []
+            "ai_roleplayers": [],
+            "game_state": "",
+            "score": 0
         }
 
     def update_user_input(self, user_input):
@@ -23,6 +25,12 @@ class GameParameters:
 
     def update_ai_roleplayers(self, ai_roleplayers):
         self.parameters["ai_roleplayers"] = ai_roleplayers
+
+    def update_game_state(self, game_state):
+        self.parameters["game_state"] = game_state
+
+    def update_score(self, score):
+        self.parameters["score"] = score
 
     def get_parameters(self):
         return self.parameters

@@ -1,6 +1,7 @@
 # Filename: user_interaction.py
 
 from transformers import AutoTokenizer, AutoModelWithLMHead
+from game_mechanics import GameMechanics
 
 class Action:
     def __init__(self, action_name, action_method):
@@ -10,33 +11,34 @@ class Action:
     def execute(self, game_parameters):
         self.action_method(game_parameters)
 
-def handle_user_input(user_input, game_parameters):
+def handle_user_input(user_input, game_mechanics):
     # Parse the user's input and update the game parameters
     actions = {
-        'legal moves': Action('legal moves', generate_legal_moves),
+        'quit': Action('quit', game_mechanics.user_action),
         # Add more actions here
     }
 
     if user_input in actions:
-        actions[user_input].execute(game_parameters)
+        actions[user_input].execute(user_input)
     else:
         print(f"Invalid command: {user_input}")
 
-def generate_legal_moves(game_parameters):
-    # Generate legal moves based on the game parameters
-    # This is a placeholder and should be replaced with actual code
-    pass
-
-def generate_ai_response(game_parameters):
+def generate_ai_response(game_mechanics):
     # Generate the AI's response using the StableLM model
     tokenizer = AutoTokenizer.from_pretrained("./stablelm-7b-sft-v7-epoch-3")
     model = AutoModelWithLMHead.from_pretrained("./stablelm-7b-sft-v7-epoch-3")
-    inputs = tokenizer.encode(game_parameters["user_input"], return_tensors='pt')
+    inputs = tokenizer.encode(game_mechanics.user_actions[-1], return_tensors='pt')
     outputs = model.generate(inputs, max_length=384)
     response = tokenizer.decode(outputs[0])
     return response
 
-def generate_ai_summary(game_parameters):
-    # Generate the AI's summary using the StableLM model
-    # This is a placeholder and should be replaced with actual code
-    pass
+def play_game():
+    game_mechanics = GameMechanics()
+    while True:
+        user_input = input('> ')
+        user_input = user_input.strip()
+        handle_user_input(user_input, game_mechanics)
+        ai_response = generate_ai_response(game_mechanics)
+        print(ai_response)
+        if game_mechanics.is_game_over():
+            break
