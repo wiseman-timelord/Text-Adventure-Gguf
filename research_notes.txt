@@ -1,45 +1,82 @@
-1. Text-based RPGs: Games using text characters instead of graphics. Examples include MUDs (Multi-User Dungeons).
-2. Role-playing: Text-based roleplay involves creating a character and interacting with other characters in a text-based setting.
-3. AI in games: AI contributes to the behaviors and intelligence of characters in video games.
-4. ChatGPT in games: ChatGPT can be used in game development to create dynamic dialogues.
-5. TUI using curses: The curses library in Python is used to create text user interfaces.
-6. JSON best practices: JSON is a lightweight data-interchange format.
-7. Game loop in text RPG: A game loop is a loop within a video game where the game's events are processed.
-8. StableLM: StableLM is a language model developed by OpenAI.
-9. Python import statements: Import statements in Python are used to gain access to the code in another module.
-10. Python virtual environments: Virtual environments allow you to create isolated Python environments where you can install packages without interfering with the global Python installation.
-11. PyPI: PyPI (Python Package Index) is the official third-party software repository for Python.
-12. Flask: Flask is a micro web framework written in Python. It is used for developing web applications and APIs.
-13. Django: Django is a high-level web framework written in Python.
-14. SQLAlchemy: SQLAlchemy is an open-source SQL toolkit and Object-Relational Mapping (ORM) library for Python.
-15. Pygame: Pygame is a cross-platform set of Python modules designed for creating video games.
-16. Matplotlib: Matplotlib is a plotting library for Python.
-17. NumPy: NumPy is a library for the Python programming language, adding support for large, multi-dimensional arrays and matrices.
-18. Pandas: Pandas is a fast, powerful, and flexible open-source data analysis and manipulation library for Python.
-19. Scikit-learn: Scikit-learn is a machine learning library for Python.
-20. TensorFlow: TensorFlow is an open-source machine learning framework developed by Google.
-21. Keras: Keras is a high-level neural networks API written in Python.
-22. OpenCV: OpenCV is an open-source computer vision and machine learning software library.
-23. Natural Language Processing (NLP): NLP is a subfield of artificial intelligence that focuses on the interaction between computers and human language.
-24. Deep Learning: Deep learning is a subset of machine learning that focuses on artificial neural networks with multiple layers.
-25. Convolutional Neural Networks (CNNs): CNNs are a type of neural network architecture designed for processing structured grid-like data.
-26. Recurrent Neural Networks (RNNs): RNNs are a type of neural network architecture designed for processing sequential data.
-27. Generative Adversarial Networks (GANs): GANs are a type of generative model that consists of a generator network and a discriminator network.
-28. Transfer Learning: Transfer learning is a technique in machine learning where a model trained on one task is reused or fine-tuned on a different but related task.
-29. Model Evaluation Metrics: Model evaluation metrics are used to assess the performance of machine learning models.
-30. Overfitting and Underfitting: Overfitting occurs when a model performs well on the training data but poorly on unseen data.
-31. Hyperparameter Tuning: Hyperparameter tuning is the process of selecting the optimal values for the hyperparameters of a machine learning model.
-32. Ensemble Learning: Ensemble learning is a technique where multiple models, called base learners, are combined to makepredictions.
-33. Bias-Variance Tradeoff: The bias-variance tradeoff is a fundamental concept in machine learning.
-34. Dimensionality Reduction: Dimensionality reduction is the process of reducing the number of input features or variables while preserving the important information in the data.
-35. Clustering: Clustering is a technique used to group similar data points together based on their characteristics or patterns.
-36. Anomaly Detection: Anomaly detection is the task of identifying rare or unusual events or patterns in data.
-37. Recommendation Systems: Recommendation systems are used to provide personalized recommendations to users based on their preferences or past behavior.
-38. Time Series Analysis: Time series analysis involves analyzing and forecasting data that is indexed by time.
-39. Neural Architecture Search (NAS): NAS is a technique in deep learning where neural network architectures are automatically searched and optimized for a given task.
-40. Data Augmentation: Data augmentation is a technique used to artificially increase the size of the training dataset by applying transformations or perturbations to the existing data.
-41. AutoML (Automated Machine Learning): AutoML refers to the automation of the machine learning pipeline.
-42. Explainable AI: Explainable AI (XAI) refers to the development of machine learning models and algorithms that can provide transparent and interpretable explanations for their predictions or decisions.
-43. Federated Learning: Federated learning is a distributed machine learning approach where training data remains on local devices or edge servers, and only model updates are shared with a central server.
-44. Quantum Machine Learning: Quantum machine learning is the intersection of quantum computing and machine learning. It explores the use of quantum algorithms and hardware to enhance machine learning tasks.
-45. GPT-3: GPT-3 (Generative Pre-trained Transformer 3) is a language model developed by OpenAI. It is one of the largest language models to date, capable of generating human-like text and performing various natural language processing tasks.
+RESEARCH SHORTLIST..
+1. Text-based RPGs: Games using text characters instead of graphics. Examples include MUDs (Multi-User Dungeons). This is the core concept of our Stable-RPG project.
+2. Role-playing: Text-based roleplay involves creating a character and interacting with other characters in a text-based setting. This is a key feature of Stable-RPG.
+3. AI in games: AI contributes to the behaviors and intelligence of characters in video games. Stable-RPG leverages AI for dynamic dialogues and scenarios.
+4. ChatGPT in games: ChatGPT can be used in game development to create dynamic dialogues. Stable-RPG uses a similar model, StableLM, for text generation.
+5. TUI using curses: The curses library in Python is used to create text user interfaces. Stable-RPG uses windows-curses for its text-based interface.
+6. JSON best practices: JSON is a lightweight data-interchange format. Stable-RPG uses JSON to manage game state.
+7. Game loop in text RPG: A game loop is a loop within a video game where the game's events are processed. Stable-RPG has a similar loop for user input, AI response, and AI summary.
+8. StableLM: StableLM is a language model developed by OpenAI. Stable-RPG uses StableLM for text generation.
+9. Python import statements: Import statements in Python are used to gain access to the code in another module. This is a fundamental part of Python programming used in Stable-RPG.
+10. Python virtual environments: Virtual environments allow you to create isolated Python environments where you can install packages without interfering with the global Python installation. This is a good practice for managing project dependencies.
+11. PyPI: PyPI (Python Package Index) is the official third-party software repository for Python. Stable-RPG's dependencies can be installed from PyPI.
+12. Transformers: Transformers is a library for natural language processing developed by Hugging Face. Stable-RPG uses the transformers library to interact with the StableLM model.
+13. Torch: Torch is a Python package that provides tensor computation and deep neural networks. Stable-RPG uses torch as a dependency for the transformers library.
+14. NLTK: NLTK (Natural Language Toolkit) is a leading platform for building Python programs to work with human language data. Stable-RPG uses NLTK for text processing.
+15. Stable Diffusion: Stable Diffusion is a model for generating images. Future versions of Stable-RPG plan to use Stable Diffusion for scene generation.
+16. Python 3.8.10: Python 3.8.10 is the version of Python used for developing Stable-RPG.
+17. Windows 10: Windows 10 is the operating system on which Stable-RPG is being developed.
+18. GPT-4: GPT-4 is the latest version of the Generative Pre-trained Transformer models developed by OpenAI. It has been used in the development of Stable-RPG.
+19. LinkReader: LinkReader is a tool used in the development of Stable-RPG.
+20. OpenAI: OpenAI is an artificial intelligence research lab consisting of both for-profit and non-profit arms. OpenAI has developed the StableLM model used in Stable-RPG.
+21. Hugging Face: Hugging Face is a company that provides a platform for training and serving machine learning models. Stable-RPG uses the transformers library developed by Hugging Face.
+22. Stable-RPG GitHub: The GitHub repository for Stable-RPG. It contains the source code and documentation forRESEARCH SHORTLIST..
+23. Text-based RPGs: Games using text characters instead of graphics. Examples include MUDs (Multi-User Dungeons). This is the core concept of our Stable-RPG project.
+24. Role-playing: Text-based roleplay involves creating a character and interacting with other characters in a text-based setting. This is a key feature of Stable-RPG.
+25. AI in games: AI contributes to the behaviors and intelligence of characters in video games. Stable-RPG leverages AI for dynamic dialogues and scenarios.
+26. ChatGPT in games: ChatGPT can be used in game development to create dynamic dialogues. Stable-RPG uses a similar model, StableLM, for text generation.
+27. TUI using curses: The curses library in Python is used to create text user interfaces. Stable-RPG uses windows-curses for its text-based interface.
+28. JSON best practices: JSON is a lightweight data-interchange format. Stable-RPG uses JSON to manage game state.
+29. Game loop in text RPG: A game loop is a loop within a video game where the game's events are processed. Stable-RPG has a similar loop for user input, AI response, and AI summary.
+30. StableLM: StableLM is a language model developed by OpenAI. Stable-RPG uses StableLM for text generation.
+31. Python import statements: Import statements in Python are used to gain access to the code in another module. This is a fundamental part of Python programming used in Stable-RPG.
+32. Python virtual environments: Virtual environments allow you to create isolated Python environments where you can install packages without interfering with the global Python installation. This is a good practice for managing project dependencies.
+33. PyPI: PyPI (Python Package Index) is the official third-party software repository for Python. Stable-RPG's dependencies can be installed from PyPI.
+34. Transformers: Transformers is a library for natural language processing developed by Hugging Face. Stable-RPG uses the transformers library to interact with the StableLM model.
+35. Torch: Torch is a Python package that provides tensor computation and deep neural networks. Stable-RPG uses torch as a dependency for the transformers library.
+36. NLTK: NLTK (Natural Language Toolkit) is a leading platform for building Python programs to work with human language data. Stable-RPG uses NLTK for text processing.
+37. Stable Diffusion: Stable Diffusion is a model for generating images. Future versions of Stable-RPG plan to use Stable Diffusion for scene generation.
+38. Python 3.8.10: Python 3.8.10 is the version of Python used for developing Stable-RPG.
+39. Windows 10: Windows 10 is the operating system on which Stable-RPG is being developed.
+40. GPT-4: GPT-4 is the latest version of the Generative Pre-trained Transformer models developed by OpenAI. It has been used in the development of Stable-RPG.
+41. VoxScript: VoxScript is a tool used in the development of Stable-RPG.
+42. Wolfram: Wolfram is a computational intelligence engine. It has been used in the development of Stable-RPG.
+43. LinkReader: LinkReader is a tool used in the development of Stable-RPG.
+44. OpenAI: OpenAI is an artificial intelligence research lab consisting of both for-profit and non-profit arms. OpenAI has developed the StableLM model used in Stable-RPG.
+45. Hugging Face: Hugging Face is a company that provides a platform for training and serving machine learning models. Stable-RPG uses the transformers library developed by Hugging Face.
+46. Stable-RPG GitHub: The GitHub repository for Stable-RPG. It contains the source code and documentation forRESEARCH SHORTLIST..
+47. Text-based RPGs: Games using text characters instead of graphics. Examples include MUDs (Multi-User Dungeons). This is the core concept of our Stable-RPG project.
+48. Role-playing: Text-based roleplay involves creating a character and interacting with other characters in a text-based setting. This is a key feature of Stable-RPG.
+49. AI in games: AI contributes to the behaviors and intelligence of characters in video games. Stable-RPG leverages AI for dynamic dialogues and scenarios.
+50. ChatGPT in games: ChatGPT can be used in game development to create dynamic dialogues. Stable-RPG uses a similar model, StableLM, for text generation.
+51. TUI using curses: The curses library in Python is used to create text user interfaces. Stable-RPG uses windows-curses for its text-based interface.
+52. JSON best practices: JSON is a lightweight data-interchange format. Stable-RPG uses JSON to manage game state.
+53. Game loop in text RPG: A game loop is a loop within a video game where the game's events are processed. Stable-RPG has a similar loop for user input, AI response, and AI summary.
+54. StableLM: StableLM is a language model developed by OpenAI. Stable-RPG uses StableLM for text generation.
+55. Python import statements: Import statements in Python are used to gain access to the code in another module. This is a fundamental part of Python programming used in Stable-RPG.
+56. Python virtual environments: Virtual environments allow you to create isolated Python environments where you can install packages without interfering with the global Python installation. This is a good practice for managing project dependencies.
+57. PyPI: PyPI (Python Package Index) is the official third-party software repository for Python. Stable-RPG's dependencies can be installed from PyPI.
+58. Transformers: Transformers is a library for natural language processing developed by Hugging Face. Stable-RPG uses the transformers library to interact with the StableLM model.
+59. Torch: Torch is a Python package that provides tensor computation and deep neural networks. Stable-RPG uses torch as a dependency for the transformers library.
+60. NLTK: NLTK (Natural Language Toolkit) is a leading platform for building Python programs to work with human language data. Stable-RPG uses NLTK for text processing.
+61. Stable Diffusion: Stable Diffusion is a model for generating images. Future versions of Stable-RPG plan to use Stable Diffusion for scene generation.
+62. Python 3.8.10: Python 3.8.10 is the version of Python used for developing Stable-RPG.
+63. Windows 10: Windows 10 is the operating system on which Stable-RPG is being developed.
+64. GPT-4: GPT-4 is the latest version of the Generative Pre-trained Transformer models developed by OpenAI. It has been used in the development of Stable-RPG.
+65. VoxScript: VoxScript is a tool used in the development of Stable-RPG.
+66. Wolfram: Wolfram is a computational intelligence engine. It has been used in the development of Stable-RPG.
+67. LinkReader: LinkReader is a tool used in the development of Stable-RPG.
+68. OpenAI: OpenAI is an artificial intelligence research lab consisting of both for-profit and non-profit arms. OpenAI has developed the StableLM model used in Stable-RPG.
+69. Hugging Face: Hugging Face is a company that provides a platform for training and serving machine learning models. Stable-RPG uses the transformers library developed by Hugging Face.
+70. Stable-RPG GitHub: The GitHub repository for Stable-RPG. It contains the source code and documentation forRESEARCH SHORTLIST..
+71. Text-based RPGs: Games using text characters instead of graphics. Examples include MUDs (Multi-User Dungeons). This is the core concept of our Stable-RPG project.
+72. Role-playing: Text-based roleplay involves creating a character and interacting with other characters in a text-based setting. This is a key feature of Stable-RPG.
+73. AI in games: AI contributes to the behaviors and intelligence of characters in video games. Stable-RPG leverages AI for dynamic dialogues and scenarios.
+74. ChatGPT in games: ChatGPT can be used in game development to create dynamic dialogues. Stable-RPG uses a similar model, StableLM, for text generation.
+75. TUI using curses: The curses library in Python is used to create text user interfaces. Stable-RPG uses windows-curses for its text-based interface.
+76. JSON best practices: JSON is a lightweight data-interchange format. Stable-RPG uses JSON to manage game state.
+77. Game loop in text RPG: A game loop is a loop within a video game where the game's events are processed. Stable-RPG has a similar loop for user input, AI response, and AI summary.
+78. StableLM: StableLM is a language model developed by OpenAI. Stable-RPG uses StableLM for text generation.
+79. Python import statements: Import statements in Python are used to gain access to the code in another module. This is a fundamental part of Python programming used in Stable-RPG.
+80. Python virtual environments: Virtual environments allow you to create isolated Python environments where you can install packages without interfering with the global Python installation. This is a good practice for managing project dependencies.
+81. PyPI: PyPI (Python Package Index) is the official third-party software repository for Python. Stable-RPG's dependencies can be installed from PyPI.
