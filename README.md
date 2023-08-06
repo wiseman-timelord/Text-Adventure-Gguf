@@ -21,6 +21,10 @@ Stable-RPG is an AI-powered text-based role-playing game that offers an immersiv
 3. Interact with the AI roleplayers through actions and speech, to which the AI responds accordingly.
 4. The game continues indefinitely until the user decides to exit.
 
+## Requirements
+
+- Python 3.?
+
 ## Disclaimer
 
 Stable-RPG is an experimental AI-powered game, and its behavior may be unpredictable at times. The game's state is managed using JSON, and the scripts are organized to separate concerns like user interaction, AI response generation, and game mechanics. Play at your own discretion and risk.
