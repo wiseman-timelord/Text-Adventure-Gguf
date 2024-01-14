@@ -25,6 +25,5 @@ Stable-RPG is an AI-powered text-based role-playing game that offers an immersiv
 
 - Developed in Python 3.8.10 on a Windows 10 system.
 
-### DISCLAIMER
-Read "Licence.Txt", its, what its there for and why its supplied with the package.
-
+## DISCLAIMER
+The "License.Txt" covers, this and relating, stuff.
