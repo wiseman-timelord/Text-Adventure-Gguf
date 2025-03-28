@@ -1,4 +1,4 @@
-# Stable-RPG
+# Text-Adventure-Gguf
 Status: Alpha.
 
 ## Description
@@ -15,7 +15,11 @@ Stable-RPG is an AI-powered text-based role-playing game that offers an immersiv
 4. The game continues indefinitely until the user decides to exit.
 
 ## Requirements
-- Developed in Python 3.8.10 on a Windows 10 system.
+- Python 3.8.10
+- Windows 10.
+
+### Development
+1. Use the research notes in `.\docs` to progress the scripts for a couple of sessions. Then when no more significant progress is possible through that means, then update the readme.md with some of the details, then delete `.\docs`.
 
 ### Structure
 ```
