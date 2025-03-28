@@ -3,7 +3,7 @@ Status: Alpha.
 
 ## Description
 
-Stable-RPG is an AI-powered text-based role-playing game that offers an immersive and interactive gaming experience. The game leverages advanced AI models to create dynamic dialogues and scenarios, providing a unique role-playing experience with every playthrough. The user can choose from a variety of realistic locations and interact with a diverse set of AI roleplayers. The game continues indefinitely until the user decides to exit, offering an endless role-playing experience. The game utilizes StableLM for text generation, a powerful language model developed by OpenAI. The game interface initially uses curses for a text-based interface, with plans to incorporate more graphical elements in future versions.
+Text-Adventure-Gguf is an AI-powered text-based role-playing game that offers an immersive and interactive gaming experience. The game leverages advanced AI models to create dynamic dialogues and scenarios, providing a unique role-playing experience with every playthrough. The user can choose from a variety of realistic locations and interact with a diverse set of AI roleplayers. The game continues indefinitely until the user decides to exit, offering an endless role-playing experience. The game utilizes Fast Small LLM's for text generation, a powerful language model developed by OpenAI. The game interface initially uses curses for a text-based interface, with plans to incorporate more graphical elements in future versions.
 
 ## Features
 - TBA.
