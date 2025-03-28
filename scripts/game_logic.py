@@ -123,3 +123,94 @@ class GameMechanics:
             self.game_state['inventory'].remove(item)
             return True
         return False
+
+    def handle_command(self, verbs, nouns):
+        """Process player commands based on parsed input."""
+        current_location = self.get_current_location()
+        
+        if "go" in verbs and nouns:
+            direction = nouns[0].lower()
+            if direction in self.locations:
+                if self.move_location(direction):
+                    return f"You move to the {direction}."
+                return "You can't move there right now."
+            return "Where do you want to go?"
+        
+        elif "talk" in verbs and nouns:
+            target = nouns[0].lower()
+            for rp in current_location.get_roleplayers():
+                if target in rp.get_name().lower():
+                    return f"{rp.get_name()} says: 'Greetings, traveler!'"
+            return "There's no one here by that name."
+        
+        elif "look" in verbs:
+            return f"{current_location.get_name()}: {current_location.get_description()}"
+        
+        elif "take" in verbs and nouns:
+            item = nouns[0].lower()
+            # Placeholder: Add items to locations later
+            self.add_inventory(item)
+            return f"You take the {item}."
+        
+        return "I don't understand that command."
+        
+    def _generate_locations(self, num_locations):
+        locations = {}
+        for i in range(num_locations):
+            name, (desc, maturity) = random.choice(list(self.location_types.items()))
+            loc_name = f"{name}_{i}"
+            roleplayers = [
+                Roleplayer(*random.choice(self.roleplayer_types))
+                for _ in range(random.randint(1, 3))
+            ]
+            locations[loc_name] = Location(loc_name, desc, maturity, roleplayers)
+        return locations
+
+    def update_roamers(self):
+        """Move roleplayers between locations randomly."""
+        for loc_name, loc in self.locations.items():
+            for rp in loc.get_roleplayers():
+                if random.random() < 0.1:  # 10% chance to move
+                    new_loc = random.choice(list(self.locations.keys()))
+                    if new_loc != loc_name:
+                        loc.remove_roleplayer(rp)
+                        self.locations[new_loc].add_roleplayer(rp)
+                        # Could log this for narrative: f"{rp.get_name()} moved to {new_loc}"
+                        
+    def trigger_encounter(self):
+        """Randomly trigger an encounter."""
+        if random.random() < 0.2:  # 20% chance per turn
+            encounter_type = random.choice(["item", "fight"])
+            if encounter_type == "item":
+                item = random.choice(["coin", "potion"])
+                self.add_inventory(item)
+                return f"You found a {item}!"
+            elif encounter_type == "fight":
+                enemy = random.choice(["bandit", "wolf"])
+                self.game_state['health'] -= 10
+                self.update_score(5)
+                return f"A {enemy} attacks! You lose 10 health but gain 5 points."
+        return None
+        
+    def save_game(self, filepath="data/savegame.json"):
+        with open(filepath, "w") as f:
+            json.dump({
+                "game_state": self.game_state,
+                "locations": {k: {
+                    "name": v.name, "description": v.description, "maturity": v.maturity,
+                    "roleplayers": [{"name": r.name, "description": r.description, "maturity": r.maturity} for r in v.roleplayers]
+                } for k, v in self.locations.items()}
+            }, f, indent=2)
+    
+    def load_game(self, filepath="data/savegame.json"):
+        try:
+            with open(filepath, "r") as f:
+                data = json.load(f)
+                self.game_state = data["game_state"]
+                self.locations = {
+                    k: Location(v["name"], v["description"], v["maturity"],
+                                [Roleplayer(r["name"], r["description"], r["maturity"]) for r in v["roleplayers"]])
+                    for k, v in data["locations"].items()
+                }
+        except FileNotFoundError:
+            self.locations = self._generate_locations(5)  # Fallback to new game
