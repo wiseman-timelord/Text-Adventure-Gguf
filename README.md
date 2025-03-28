@@ -22,8 +22,22 @@ Stable-RPG is an AI-powered text-based role-playing game that offers an immersiv
 4. The game continues indefinitely until the user decides to exit.
 
 ## Requirements
-
 - Developed in Python 3.8.10 on a Windows 10 system.
+
+### Structure
+```
+Text-Adventure-Gguf/
+├── launcher.py                (New main entry point)
+├── installer.py               (Standalone installer)
+├── data/
+│   ├── persistent.json        (Game config)
+│   └── scripts/               (Consolidated scripts)
+│       ├── game_logic.py
+│       ├── user_interface.py
+│       ├── ai_integration.py
+│       └── input_handling.py
+└── venv/                      (Virtual environment)
+```
 
 ## DISCLAIMER
 This software is subject to the terms in License.Txt, covering usage, distribution, and modifications. For full details on your rights and obligations, refer to License.Txt.
