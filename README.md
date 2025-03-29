@@ -19,7 +19,15 @@ Text-Adventure-Gguf is an AI-powered text-based role-playing game that offers an
 - Windows 10.
 
 ### Development
-1. Use the research notes in `.\docs` to progress the scripts for a couple of sessions. Then when no more significant progress is possible through that means, then update the readme.md with some of the details, then delete `.\docs`.
+Outstanding Areas of Work, use the research notes in `.\docs` to progress the scripts for while implenting the following...
+- Decide on AI Model Integration: Choose between switching to StableLM with an 8k context via Hugging Face's transformers or optimizing Llama for the same context size.
+- Integrate Stable Diffusion: Add Stable Diffusion to generate scene descriptions (or images), deciding if it’s for the current or future version.
+- Enhance Game Mechanics: Implement quests, stat-based combat, expanded inventory, and varied encounters like puzzles.
+- Improve the User Interface: Upgrade the TUI with a map display, inventory/stats window, and dynamic time tracking.
+- Add Error Handling: Include try-except blocks for file loading, AI responses, and input edge case handling.
+- Optimize Performance: Enhance ai_integration.py with batch processing or caching and profile the game loop for bottlenecks.
+- backend/model compatibility.
+- Increase Configuration Flexibility: Expand persistent.json to allow customizable settings like encounter rates and roamer frequency.
 
 ### Structure
 ```
