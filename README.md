@@ -1,5 +1,5 @@
 # Text-Adventure-Gguf
-Status: Alpha - Not Working.
+Status: Alpha - Not Working, long-term side project.
 
 ## Description
 
