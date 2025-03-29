@@ -2,6 +2,8 @@
 from dataclasses import dataclass, field
 import nltk
 from typing import Dict
+import random
+import json
 
 @dataclass
 class Roleplayer:
@@ -24,6 +26,7 @@ class Location:
     description: str
     maturity: str
     roleplayers: list[Roleplayer] = field(default_factory=list)
+    connections: list[str] = field(default_factory=list)
 
     def get_name(self) -> str:
         return self.name
@@ -45,53 +48,49 @@ class Location:
 
 class GameMechanics:
     def __init__(self):
+        self.location_types = {
+            "forest": ("A dense forest with tall trees.", "clean"),
+            "cave": ("A dark, damp cave.", "moderate"),
+            "village": ("A peaceful village.", "clean"),
+            "woods": ("A dark and mysterious woods.", "lewd"),
+            "pub": ("A lively pub.", "moderate"),
+            "lake": ("A serene lake.", "clean")
+        }
+        self.roleplayer_types = [
+            ("villager", "A friendly villager.", "clean"),
+            ("bandit", "A dangerous bandit.", "lewd"),
+            ("friends", "Your close friends.", "clean"),
+            ("gang", "A group of friends.", "moderate"),
+            ("strangers", "People you do not know.", "lewd"),
+            ("police", "Officers maintaining law and order.", "clean")
+        ]
         self.locations = self._initialize_locations()
         self.game_state = {
-            'current_location': 'house',
+            'current_location': 'forest_0',  # Adjusted to match generated locations
             'score': 0,
             'inventory': [],
             'health': 100
         }
 
     def _initialize_locations(self) -> Dict[str, Location]:
-        return {
-            'house': Location('House', 'A cozy little house.', 'clean', [
-                Roleplayer('gang', 'A group of friends.', 'moderate'),
-                Roleplayer('friends', 'Your close friends.', 'clean'),
-                Roleplayer('strangers', 'People you do not know.', 'lewd')
-            ]),
-            'street': Location('Street', 'A busy city street.', 'moderate', [
-                Roleplayer('police', 'Officers maintaining law and order.', 'clean'),
-                Roleplayer('gang', 'A group of friends.', 'moderate'),
-                Roleplayer('strangers', 'People you do not know.', 'lewd')
-            ]),
-            'park': Location('Park', 'A peaceful city park.', 'clean', [
-                Roleplayer('friends', 'Your close friends.', 'clean'),
-                Roleplayer('strangers', 'People you do not know.', 'lewd')
-            ]),
-            'woods': Location('Woods', 'A dark and mysterious woods.', 'lewd', [
-                Roleplayer('gang', 'A group of friends.', 'moderate'),
-                Roleplayer('strangers', 'People you do not know.', 'lewd')
-            ]),
-            'pub': Location('Pub', 'A lively pub.', 'moderate', [
-                Roleplayer('friends', 'Your close friends.', 'clean'),
-                Roleplayer('police', 'Officers maintaining law and order.', 'clean'),
-                Roleplayer('strangers', 'People you do not know.', 'lewd')
-            ]),
-            'lake': Location('Lake', 'A serene lake.', 'clean', [
-                Roleplayer('friends', 'Your close friends.', 'clean'),
-                Roleplayer('strangers', 'People you do not know.', 'lewd')
-            ]),
-            'car': Location('Car', 'A fast-moving car.', 'moderate', [
-                Roleplayer('friends', 'Your close friends.', 'clean'),
-                Roleplayer('police', 'Officers maintaining law and order.', 'clean'),
-                Roleplayer('gang', 'A group of friends.', 'moderate')
-            ]),
-            'van': Location('Van', 'A suspicious van.', 'lewd', [
-                Roleplayer('gang', 'A group of friends.', 'moderate'),
-                Roleplayer('strangers', 'People you do not know.', 'lewd')
-            ])
-        }
+        return self._generate_locations(5)  # Use dynamic generation instead of hardcoded
+
+    def _generate_locations(self, num_locations):
+        locations = {}
+        loc_names = []
+        for i in range(num_locations):
+            loc_type = random.choice(list(self.location_types.keys()))
+            desc, maturity = self.location_types[loc_type]
+            loc_name = f"{loc_type}_{i}"
+            roleplayers = [Roleplayer(*random.choice(self.roleplayer_types)) 
+                         for _ in range(random.randint(1, 3))]
+            locations[loc_name] = Location(loc_name, desc, maturity, roleplayers, [])
+            loc_names.append(loc_name)
+        # Linear connections for simplicity
+        for i in range(len(loc_names) - 1):
+            locations[loc_names[i]].connections.append(loc_names[i + 1])
+            locations[loc_names[i + 1]].connections.append(loc_names[i])
+        return locations
 
     def get_current_location(self) -> Location:
         return self.locations[self.game_state['current_location']]
@@ -129,12 +128,12 @@ class GameMechanics:
         current_location = self.get_current_location()
         
         if "go" in verbs and nouns:
-            direction = nouns[0].lower()
-            if direction in self.locations:
-                if self.move_location(direction):
-                    return f"You move to the {direction}."
+            target = nouns[0].lower()
+            if target in current_location.connections:
+                if self.move_location(target):
+                    return f"You move to {target}."
                 return "You can't move there right now."
-            return "Where do you want to go?"
+            return "You can't go there from here."
         
         elif "talk" in verbs and nouns:
             target = nouns[0].lower()
@@ -144,27 +143,29 @@ class GameMechanics:
             return "There's no one here by that name."
         
         elif "look" in verbs:
-            return f"{current_location.get_name()}: {current_location.get_description()}"
+            exits = ", ".join(current_location.connections)
+            return f"{current_location.get_name()}: {current_location.get_description()}\nExits: {exits}"
         
         elif "take" in verbs and nouns:
             item = nouns[0].lower()
-            # Placeholder: Add items to locations later
-            self.add_inventory(item)
+            self.add_inventory(item)  # Placeholder: Add item availability check later
             return f"You take the {item}."
         
-        return "I don't understand that command."
+        elif "inventory" in verbs or "i" in verbs:
+            items = ", ".join(self.game_state['inventory']) if self.game_state['inventory'] else "nothing"
+            return f"You have: {items}"
         
-    def _generate_locations(self, num_locations):
-        locations = {}
-        for i in range(num_locations):
-            name, (desc, maturity) = random.choice(list(self.location_types.items()))
-            loc_name = f"{name}_{i}"
-            roleplayers = [
-                Roleplayer(*random.choice(self.roleplayer_types))
-                for _ in range(random.randint(1, 3))
-            ]
-            locations[loc_name] = Location(loc_name, desc, maturity, roleplayers)
-        return locations
+        elif "use" in verbs and nouns:
+            item = nouns[0].lower()
+            if item in self.game_state['inventory']:
+                if item == "potion":
+                    self.game_state['health'] = min(100, self.game_state['health'] + 20)
+                    self.remove_inventory(item)
+                    return "You drink the potion and restore 20 health."
+                return f"You can't use the {item}."
+            return "You don't have that item."
+        
+        return "I don't understand that command."
 
     def update_roamers(self):
         """Move roleplayers between locations randomly."""
@@ -175,12 +176,11 @@ class GameMechanics:
                     if new_loc != loc_name:
                         loc.remove_roleplayer(rp)
                         self.locations[new_loc].add_roleplayer(rp)
-                        # Could log this for narrative: f"{rp.get_name()} moved to {new_loc}"
-                        
+
     def trigger_encounter(self):
         """Randomly trigger an encounter."""
         if random.random() < 0.2:  # 20% chance per turn
-            encounter_type = random.choice(["item", "fight"])
+            encounter_type = random.choice(["item", "fight", "dialogue"])
             if encounter_type == "item":
                 item = random.choice(["coin", "potion"])
                 self.add_inventory(item)
@@ -190,15 +190,19 @@ class GameMechanics:
                 self.game_state['health'] -= 10
                 self.update_score(5)
                 return f"A {enemy} attacks! You lose 10 health but gain 5 points."
+            elif encounter_type == "dialogue":
+                return "A mysterious figure approaches and says, 'Beware the shadows.'"
         return None
-        
+
     def save_game(self, filepath="data/savegame.json"):
         with open(filepath, "w") as f:
             json.dump({
                 "game_state": self.game_state,
                 "locations": {k: {
                     "name": v.name, "description": v.description, "maturity": v.maturity,
-                    "roleplayers": [{"name": r.name, "description": r.description, "maturity": r.maturity} for r in v.roleplayers]
+                    "roleplayers": [{"name": r.name, "description": r.description, "maturity": r.maturity} 
+                                   for r in v.roleplayers],
+                    "connections": v.connections
                 } for k, v in self.locations.items()}
             }, f, indent=2)
     
@@ -209,7 +213,8 @@ class GameMechanics:
                 self.game_state = data["game_state"]
                 self.locations = {
                     k: Location(v["name"], v["description"], v["maturity"],
-                                [Roleplayer(r["name"], r["description"], r["maturity"]) for r in v["roleplayers"]])
+                                [Roleplayer(r["name"], r["description"], r["maturity"]) for r in v["roleplayers"]],
+                                v["connections"])
                     for k, v in data["locations"].items()
                 }
         except FileNotFoundError:

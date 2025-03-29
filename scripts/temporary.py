@@ -25,6 +25,7 @@ BACKEND_OPTIONS = {
 CONFIG_TEMPLATE = {
     "model_settings": {
         "model_dir": "models",
+        "model_file": "text-adventure.gguf",  # Default model
         "context_size": 8192,
         "llama_cli_path": "",
         "starting_location": "house"
